@@ -1,0 +1,14 @@
+/* #main *{
+  transform: scale(1) !important;
+  
+} */
+#main{
+  height: 36rem;
+}
+:hover #main .swiper-slide{
+  transform: scale(1) !important;
+ 
+}
+#main .swiper-slide img{
+ border-radius: 0;
+}

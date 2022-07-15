@@ -1,0 +1,17 @@
+<div id="main" class=" overflow-hidden">
+  <swiper
+    [navigation]="true"
+    [slidesPerView]="1"
+    [slidesPerGroup]="1"
+    [spaceBetween]="0"
+    [pagination]=""
+
+    class="mySwiper bg-transparent h-4/5"
+  >
+    <ng-template *ngFor="let src of posterPaths" swiperSlide>
+      <div class="slide-container">
+        <img src="{{ src }}" alt="" class="bg-transparent "/>
+      </div>
+    </ng-template>
+  </swiper>
+</div>

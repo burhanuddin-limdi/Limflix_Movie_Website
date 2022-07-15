@@ -1,0 +1,25 @@
+<div
+  class="inline right-0 top-0 w-full max-h-screen object-cover brightness-50"
+>
+  <img src="{{ poster }}" alt="" />
+</div>
+<main class="px-14 mt-36 absolute top-14 text-gray-200">
+  <div class="flex align-bottom">
+    <h1 class="text-5xl">{{ mainInfo["name"] }}</h1>
+    <h1 class="text-5xl">{{ mainInfo["title"] }}</h1>
+    <p class="mt-6">{{ mainInfo["last_air_date"] }}</p>
+    <p class="mt-6">{{ mainInfo["release_date"] }}</p>
+  </div>
+  <h3 class="text-xl mb-10 mt-5">{{ mainInfo["tagline"] }}</h3>
+  <p class="w-1/2">
+    {{ mainInfo["overview"] }}
+  </p>
+  <div>
+    <p>Similar</p>
+    <div class="flex flex-wrap">
+      <div class="w-40" *ngFor="let src of posterPaths">
+        <img src="{{ src }}" alt="" loading='lazy'/>
+      </div>
+    </div>
+  </div>
+</main>

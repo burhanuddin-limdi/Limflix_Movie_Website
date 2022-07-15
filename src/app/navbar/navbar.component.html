@@ -1,0 +1,66 @@
+<nav id="navbar" class="fixed top-0 flex py-7 w-full z-50 bg-gray-900 bg-opacity-0" >
+  <img
+    src="../../assets/logo.svg"
+    alt=""
+    class="w-28 md:w-32 mx-9 md:mb-auto mb-20"
+  />
+  <!-- <p class="md:hidden text-gray-300 hover:text-white cursor-pointer">Browse</p> -->
+  <ul class="md:flex space-x-6 text-gray-300 w-full md:w-auto md:mt-auto mt-1">
+    <li
+      class="hover:text-white cursor-pointer block md:hidden"
+      (click)="down = !down"
+    >
+      Browse <i class="fa-solid fa-caret-down"></i>
+    </li>
+    <li
+      [ngClass]="!down ? 'hidden' : ''"
+      class="hover:text-white cursor-pointer md:block"
+      routerLink="/"
+      (click)="decideCarExt();getData()"
+      
+    >
+      Home
+    </li>
+    <li
+      [ngClass]="!down ? 'hidden' : ''"
+      class="hover:text-white cursor-pointer md:block"
+      routerLink="/tv"
+      (click)="decideCarExt();getData()"
+    >
+      TV Shows
+    </li>
+    <li
+      [ngClass]="!down ? 'hidden' : ''"
+      class="hover:text-white cursor-pointer md:block"
+      routerLink="/movies"
+      (click)="decideCarExt();getData()"
+      
+    >
+      Movies
+    </li>
+    <li
+      [ngClass]="!down ? 'hidden' : ''"
+      class="hover:text-white cursor-pointer md:block"
+    >
+      My List
+    </li>
+  </ul>
+  <ul
+    class="text-white flex space-x-5 justify-end mr-10"
+    style="flex: fit-content"
+  >
+    <li class="hover:text-black cursor-pointer">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </li>
+    <li class="hover:text-black cursor-pointer">
+      <i class="fa-solid fa-bell"></i>
+    </li>
+    <li class="cursor-pointer">
+      <img
+        class="max-w-min w-7 rounded-lg"
+        src="../../assets/profile.jpg"
+        alt=""
+      />
+    </li>
+  </ul>
+</nav>

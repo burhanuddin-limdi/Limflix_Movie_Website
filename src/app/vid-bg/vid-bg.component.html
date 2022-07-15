@@ -1,0 +1,22 @@
+<video
+  id="intro"
+  class="relative right-0 top-0 w-full max-h-screen object-cover"
+  loop
+  muted
+  autoplay
+  oncanplay="this.play()"
+  [muted]="mute"
+>
+  <source
+    src="../../assets/Vikings Season 4 - Opening Credits _ Intro.mp4"
+    type="video/mp4"
+  />
+</video>
+<button
+  (click)="mute = !mute"
+  class="absolute z-10 text-2xl sm:text-3xl hover:text-white text-gray-300"
+  style="top: 30vw; right: 10vw"
+>
+  <i *ngIf="mute" class="fa-solid fa-volume-xmark mx-3 my-3"></i>
+  <i *ngIf="!mute" class="fa-solid fa-volume-high mx-3 my-3"></i>
+</button>
