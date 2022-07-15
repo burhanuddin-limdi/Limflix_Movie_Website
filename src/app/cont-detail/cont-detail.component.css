@@ -4,3 +4,6 @@ main{
 
 
 }
+.pstr:nth-child(1){
+    margin-top:15px
+}

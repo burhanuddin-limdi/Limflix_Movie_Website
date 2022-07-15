@@ -3,22 +3,26 @@
 >
   <img src="{{ poster }}" alt="" />
 </div>
-<main class="px-14 mt-36 absolute top-14 text-gray-200">
+<main class="px-14 mt-36 absolute top-14 text-gray-300">
   <div class="flex align-bottom">
     <h1 class="text-5xl">{{ mainInfo["name"] }}</h1>
     <h1 class="text-5xl">{{ mainInfo["title"] }}</h1>
-    <p class="mt-6">{{ mainInfo["last_air_date"] }}</p>
-    <p class="mt-6">{{ mainInfo["release_date"] }}</p>
   </div>
+  <p>
+    {{ duration }} | {{ mainInfo["release_date"] }}
+    {{ mainInfo["last_air_date"] }} |  {{mainInfo['vote_average']}}/10
+  </p>
   <h3 class="text-xl mb-10 mt-5">{{ mainInfo["tagline"] }}</h3>
   <p class="w-1/2">
     {{ mainInfo["overview"] }}
   </p>
-  <div>
-    <p>Similar</p>
-    <div class="flex flex-wrap">
-      <div class="w-40" *ngFor="let src of posterPaths">
-        <img src="{{ src }}" alt="" loading='lazy'/>
+
+  <div class="mt-10">
+    <p class="text-2xl mb-5">Similar</p>
+    <div class="flex flex-wrap space-x-4 space-y-4">
+      <div></div>
+      <div class="w-40 h-fit pstr cursor-pointer hover:opacity-80" *ngFor="let src of info" [routerLink]="['/',type,src['id']]">
+        <img src="{{ src['posterPath'] }}" alt="" loading="lazy" />
       </div>
     </div>
   </div>
