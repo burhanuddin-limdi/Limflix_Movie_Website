@@ -13,15 +13,16 @@
     {{ mainInfo["last_air_date"] }} |  {{mainInfo['vote_average']}}/10
   </p>
   <h3 class="text-xl mb-10 mt-5">{{ mainInfo["tagline"] }}</h3>
-  <p class="w-1/2">
+  <p class="md:w-1/2 w-full">
     {{ mainInfo["overview"] }}
   </p>
 
   <div class="mt-10">
     <p class="text-2xl mb-5">Similar</p>
-    <div class="flex flex-wrap space-x-4 space-y-4">
-      <div></div>
-      <div class="w-40 h-fit pstr cursor-pointer hover:opacity-80" *ngFor="let src of info" [routerLink]="['/',type,src['id']]">
+    <!-- <div class="flex flex-wrap space-x-4 space-y-4"> -->
+      <div class="grid lg:grid-cols-6 md:grid-cols-5 sm:grid-cols-4 grid-cols-2">
+      
+      <div class="w-auto mx-2 h-fit cursor-pointer hover:opacity-80 mb-4" *ngFor="let src of info" [routerLink]="['/',type,src['id']]">
         <img src="{{ src['posterPath'] }}" alt="" loading="lazy" />
       </div>
     </div>

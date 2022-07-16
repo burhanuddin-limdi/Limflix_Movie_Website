@@ -1,9 +1,6 @@
 main{
-    /* -webkit-text-stroke: 1px black; */
-    text-shadow: 0 0 2px black;
+   
+    text-shadow: 0 0 3px black;
 
 
-}
-.pstr:nth-child(1){
-    margin-top:15px
 }
