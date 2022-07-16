@@ -1,8 +1,9 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { SwiperComponent } from 'swiper/angular';
-import SwiperCore, { FreeMode, Navigation, Pagination } from 'swiper';
+import SwiperCore, { FreeMode, Navigation, Pagination, SwiperOptions } from 'swiper';
 import { urls } from '../tmdburls';
 import { NonGenreDataService } from '../non-genre-data.service';
+import {config}from'../swiperConfig'
 SwiperCore.use([Navigation, Pagination, FreeMode]);
 @Component({
   selector: 'app-home',
@@ -11,6 +12,14 @@ SwiperCore.use([Navigation, Pagination, FreeMode]);
   encapsulation: ViewEncapsulation.None,
 })
 export class HomeComponent implements OnInit {
+  // config:SwiperOptions = {
+  //   breakpoints:{
+  //     1000:{
+  //       slidesPerView:7
+  //     }
+  //   }
+  // }
+  config=config;
   API_KEY = urls.API_KEY;
   BASE_URL = urls.BASE_URL;
   allowCont=true;
