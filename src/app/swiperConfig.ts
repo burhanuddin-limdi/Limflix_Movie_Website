@@ -26,7 +26,7 @@ export const config:SwiperOptions={
 
         },
         400:{
-            slidesPerView:5,
+            slidesPerView:4,
             spaceBetween:8,
     slidesPerGroup:3
         }
