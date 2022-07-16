@@ -8,9 +8,9 @@
 
     class="mySwiper bg-transparent h-4/5"
   >
-    <ng-template *ngFor="let src of posterPaths" swiperSlide>
-      <div class="slide-container">
-        <img src="{{ src }}" alt="" class="bg-transparent "/>
+    <ng-template *ngFor="let src of info" swiperSlide>
+      <div class="slide-container" [routerLink]="['/',type,src['id']]">
+        <img src="{{ src['posterPath'] }}" alt="" class="bg-transparent "/>
       </div>
     </ng-template>
   </swiper>

@@ -21,11 +21,17 @@ export class MainCarouselComponent implements OnInit {
     }, 110);
     
   }
-  posterPaths = [];
+  info:object[]=[];
+  type:string='';
   carExt:string
   getData() {
     this.carExt=this.ss.getCarExt();
-    this.posterPaths=[];
+    if(this.carExt==='tv/popular?'){
+      this.type='tv'
+    }else{
+      this.type='movie'
+    }
+    this.info=[];
     this.http
       .get(
         urls.BASE_URL +
@@ -36,7 +42,11 @@ export class MainCarouselComponent implements OnInit {
       )
       .subscribe((resData) => {
         resData['results'].forEach((ele) => {
-          this.posterPaths.push(urls.POSTER + ele.backdrop_path);
+          let infor = {
+            posterPath:urls.POSTER + ele.backdrop_path,
+            id:ele.id
+          }
+          this.info.push(infor);
         });
       });
   }
