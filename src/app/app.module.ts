@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { TvShowsComponent } from './tv-shows/tv-shows.component';
 import { MainCarouselComponent } from './main-carousel/main-carousel.component';
 import { ContDetailComponent } from './cont-detail/cont-detail.component';
+import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +24,7 @@ import { ContDetailComponent } from './cont-detail/cont-detail.component';
     TvShowsComponent,
     MainCarouselComponent,
     ContDetailComponent,
+    FooterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule,SwiperModule],
   providers: [],
